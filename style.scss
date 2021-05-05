@@ -4,11 +4,12 @@
     --h3: 270px;
     --mob: 1.2;
 
-    --color1: #000;
-    --color2:  #fff;
+    --color1: #1c201e;
+    --color2: #00000050;
   }
 
 body {
+    background-color: var(--color1);
     padding: 0;
     margin: 0;
 }
@@ -26,9 +27,9 @@ body {
 }
 
 .pic {
-    background-color: #b8b8b8;
     width: 100%;
     object-fit: cover;
+    box-shadow: 0px 5px 10px var(--color2);
 }
 
 .h1 {
@@ -66,6 +67,7 @@ body {
 }
 .pic7 {
     grid-area: 7/4/8/7;
+    object-position: 30% 50%;
 }
 .pic8 {
     grid-area: 8/1/9/8;
@@ -79,20 +81,32 @@ body {
     object-position: 100% 50%;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 900px) {
     
     .contwrapper {
-        margin: 10px 10px;
+        margin: 6px;
+    }
+    .cont {
+        grid-gap: 6px;
     }
 
     .h1 {
-        height: calc( var(--h1) / var(--mob)); 
+        height: 100px; 
     }
     .h2 {
-        height: calc( var(--h2) / var(--mob)); 
+        height: 150px; 
      }
      .h3 {
-        height: calc( var(--h3) / var(--mob)); 
+        height: 100px; 
      }
+
+}
+
+@media screen and (max-width: 600px) {
+    
+    .contwrapper {
+        margin: 6px 0;
+    }
+
 }
 
